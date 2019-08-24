@@ -1,0 +1,20 @@
+var input = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"]  
+
+function dataHandling2(input){
+  var s1 = input.splice(1,1,"Roman Alamsyah Elsharawy")
+  var s2 = input.splice(2,1, "Provinsi Bandar Lampung")
+  var getInput3 = input[3]
+  var s4 = input.splice(4,1,"Pria")
+  var s5 = input.splice(5,1,"SMA Internasional Metro")
+
+  var tgl = getInput3.split('/');
+  var ubahTgl = getInput3.split('/')
+  console.log(input);
+  ubahTgl[1] = bulan(ubahTgl[1])
+  console.log(ubahTgl[1]);
+  tgl.sort(function(a,b){return b-a})
+  console.log(tgl)
+  console.log(getInput3.split('/').join('-'))
+  var batas = input[1].slice(0,15)
+  console.log(batas)
+}
